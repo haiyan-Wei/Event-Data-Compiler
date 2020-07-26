@@ -1,0 +1,16 @@
+! 1 gauge(s)
+
+! Event Start at: 2006-07-05 16:16:00 at GAUGE #83
+
+BEGIN GAUGE  83
+X =     589697
+Y =     3512426
+SAT =   0.3149
+N =     3
+
+TIME     DEPTH ! (mm)
+0.00     0.0000
+2.00     0.2540
+4.00     0.6350
+END
+

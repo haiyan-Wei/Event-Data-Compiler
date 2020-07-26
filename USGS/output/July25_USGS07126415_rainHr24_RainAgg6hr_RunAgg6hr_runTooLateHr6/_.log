@@ -1,0 +1,400 @@
+Description: This is a log file created with the following script. Please turn off the option of "wrap text" to view.
+
+Script location: \USGS\EDC_USGS.py
+Objectives:
+    1. Download USGS rainfall and runoff data
+    2. Query runoff and rainfall rates for all events
+    3. Create .pre files
+    4. Plot hyetograph and hydrographs
+    5. Create a summary table for all events
+
+Definitions:
+    1. record: a measured rainfall (or runoff) value with a timestamp
+    2. segment: a set of rainfall (or runoff) records between two zero records
+    3. runoff-rainfall event: a series of rainfall and runoff records (or segments) that are appropriately aligned so that the selected runoff records form an independent runoff event that is responsive to the chosen rainfall records
+
+
+
+
+Started at: 2020-07-25 21:38:11.814700
+
+
+
+
+========= Inputs =========
+
+flume: 07126415
+gauges: ['07126415', '07126390', '07126480', '373315103493101', '373232103555201', '373706103410701', '373823103465601']
+wspace: \USGS\output\July25_USGS07126415_rainHr24_RainAgg6hr_RunAgg6hr_runTooLateHr6
+dir_input: \USGS\USGS_input_data
+
+
+
+
+
+========= Read runoff Text File =========
+
+runoff at location 07126415:
+    -1406 non-numeric values
+    -207668 records available
+    -2231 non-zero records
+    -intervals in min: 0,5,7,8,10,15,30,45,60,75,90,105,1455,2895,195075,195240,217455,218760,218895,220335
+
+
+
+========= Read rain Text File =========
+
+rain at location 07126415:
+    -4160 non-numeric values
+    -609236 records available
+    -4544 non-zero records
+    -intervals in min: 5,10,15,20,30,60,65,70,105,1445,2885,4325,5765,22215,195205,217435,217440,217445,218740,218885
+
+rain at location 07126390:
+    -3902 non-numeric values
+    -616868 records available
+    -4883 non-zero records
+    -intervals in min: 0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,95,130,250,370,1445,2885,11525,24485,196620,204160,217430,217440,217445,218725,218885
+
+rain at location 07126480:
+    -3320 non-numeric values
+    -623314 records available
+    -5025 non-zero records
+    -intervals in min: 0,5,10,15,20,25,30,35,40,45,50,60,65,75,85,125,130,135,155,170,205,250,310,370,430,610,18755,60970,157240,193805,205455,217435,217445,218885
+
+rain at location 373315103493101:
+    -0 non-numeric values
+    -983983 records available
+    -7210 non-zero records
+    -intervals in min: 0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,130,140,145,150,155,160,170,175,185,190,195,200,205,210,215,220,225,230,235,240,245,265,280,295,305,320,340,365,410,415,440,470,620,755,865,905,930,935,945,965,1020,1080,1100,1205,1225,1345,1365,1405,1425,1440,1445,1595,2200,2600,2885,4325,5765,275045
+
+rain at location 373232103555201:
+    -0 non-numeric values
+    -996089 records available
+    -6757 non-zero records
+    -intervals in min: 0,5,10,15,20,25,30,35,40,45,60,65,70,80,125,165,335,1445,2885,4325,276250
+
+rain at location 373706103410701:
+    -0 non-numeric values
+    -344801 records available
+    -1506 non-zero records
+    -intervals in min: 0,5,10,25,40,45,55,65,90,115,145,150,185,240,255,1445,2885,5765
+
+rain at location 373823103465601:
+    -0 non-numeric values
+    -936120 records available
+    -7177 non-zero records
+    -intervals in min: 0,5,10,15,20,25,35,50,55,60,65,70,75,80,95,100,105,125,130,145,150,155,160,165,180,185,190,235,240,245,310,425,465,490,545,715,925,1165,1225,1245,1440,1445,2845,2885,5020,5720,5765,125395,129635,277235
+
+
+
+==== Aggregate runoff Segments Based on AggHr ====
+
+Number of runoff events at 07126415:  40
+
+
+==== Aggregate rain Segments Based on AggHr ====
+
+Number of rain events at 07126415:  414
+Number of rain events at 07126390:  457
+Number of rain events at 07126480:  452
+Number of rain events at 373315103493101:  821
+Number of rain events at 373232103555201:  746
+Number of rain events at 373706103410701:  247
+Number of rain events at 373823103465601:  786
+
+
+==== Query rainfall and runoff rates ====
+
+
+retrieve rainfall and runoff for event 20100711-214500
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20100716-024500
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20100722-200000
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20100805-050000
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20100807-180000
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20110723-203000
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+retrieve rainfall and runoff for event 20110802-190000
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20110817-184500
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20110914-140000
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20120926-224500
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20130803-154500
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20130807-150000
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20130812-144500
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20130818-170000
+    -No rainfall data at 07126415
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373706103410701
+retrieve rainfall and runoff for event 20140608-154500
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20140701-231500
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20140712-174500
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20140801-161500
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20140810-220000
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20140826-220000
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20140904-164500
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+retrieve rainfall and runoff for event 20140928-234500
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20141008-234500
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20150529-223000
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20150610-141500
+    -No rainfall data at 373706103410701
+retrieve rainfall and runoff for event 20150611-210000
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20150617-150000
+    -No rainfall data at 373706103410701
+retrieve rainfall and runoff for event 20150618-163000
+    -No rainfall data at 373706103410701
+retrieve rainfall and runoff for event 20150619-151500
+    -No rainfall data at 373706103410701
+retrieve rainfall and runoff for event 20150621-143000
+    -No rainfall data at 373706103410701
+retrieve rainfall and runoff for event 20150623-160000
+    -No rainfall data at 373706103410701
+retrieve rainfall and runoff for event 20150624-141500
+    -No rainfall data at 373706103410701
+retrieve rainfall and runoff for event 20170510-160000
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20170511-074500
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20170530-203000
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20170809-200000
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20180723-221500
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20180730-071500
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20180806-230000
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 07126480
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+retrieve rainfall and runoff for event 20190721-204500
+    -No rainfall data at 07126415
+    -No rainfall data at 07126390
+    -No rainfall data at 373315103493101
+    -No rainfall data at 373232103555201
+    -No rainfall data at 373706103410701
+    -No rainfall data at 373823103465601
+
+
+==== Create a summary table ====
+
+
+
+
+==== Create .pre file for RHEM ====
+
+
+40 .pre files are created. 
+
+
+
+==== Create scatter plot and box plot for outlier detection ====
+
+
+
+
+==== Create hyetographs and hydrographs for each event ====
+
+
+
+
+===== THE END =====
+Time to complete: 0:00:57.261490

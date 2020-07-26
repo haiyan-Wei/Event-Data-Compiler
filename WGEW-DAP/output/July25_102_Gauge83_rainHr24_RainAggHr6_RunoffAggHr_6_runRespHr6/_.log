@@ -1,0 +1,200 @@
+Description: This is a log file created with the following script. Please turn off the option of "wrap text" to view.
+
+Script location: /WGEW-DAP/DEC_DAP_Lucky_Hills_example_inputs.py
+Objectives:
+        1. Query runoff, rainfall, soil moisture, and sediment data from the DAP data server
+        2. Create .pre files
+        3. Plot hyetograph and hydrographs
+        4. Create a summary table for all events
+
+Definitions:
+        1. record: a measured rainfall (or runoff) value with a timestamp
+        2. segment: a set of rainfall (or runoff) records between two zero records
+        3. runoff-rainfall event: a series of rainfall and runoff records (or segments) that are appropriately aligned so that the selected runoff records form an independent runoff event that is responsive to the chosen rainfall records
+
+
+
+Started at: 2020-07-25 21:26:13.364717
+
+
+
+
+========= Inputs =========
+
+wspace: \WGEW-DAP\output\July25_102_Gauge83_rainHr24_RainAggHr6_RunoffAggHr_6_runRespHr6
+watershed: 63
+flume: 102
+gauges: [83]
+runoffTooLow: 0.003
+rainTooLow: 0.254
+runoffAggHr: 6
+runoffAggHr: 6
+rainHr: 24
+runoffAggHr: 6
+
+
+
+========= Query runoff segments from DAP =========
+
+
+Counts in the segment table:
+ flume                851
+duration_DAP         851
+runoffVolume_DAP     611
+runoffPeak_DAP       611
+runEventCode         851
+dataType             851
+runCalc_d            408
+startTime            851
+endTime              851
+preName              851
+missingRunDAPFlag    240
+dtype: int64
+
+
+Total number of runoff segments: 851
+  -number of analog segments: 443
+  -number of digital segments: 408
+  -240 segments with missing runoff (blank)
+  -0 runoff segments with 0 runoff
+
+"runoffAggHr" was applied to all runoff segments (including missing and 0)
+Total Number of Runoff Events: 765
+  -86 segments were aggreated
+
+
+========= Query rainfall, runoff, soil moisture and sediment =========
+
+
+at gauge83:
+33906 rainfall records are available from DAP. Ailability: 1963-07-08 16:30:00 to 2020-07-24 12:52:00
+
+no rainfall rates for runoff event a19660816-114200
+no rainfall rates for runoff event a19850126-100200
+no rainfall rates for runoff event a19851126-020100
+no rainfall rates for runoff event a19880413-221000
+no rainfall rates for runoff event a19890903-160300
+no rainfall rates for runoff event d19990622-100100
+no rainfall rates for runoff event d20000517-093200
+no rainfall rates for runoff event d20000523-084445
+no rainfall rates for runoff event d20000627-193630
+no rainfall rates for runoff event d20000719-101400
+no rainfall rates for runoff event d20010529-144145
+no rainfall rates for runoff event d20020508-105915
+no rainfall rates for runoff event d20020922-115645
+no rainfall rates for runoff event d20030711-090745
+no rainfall rates for runoff event d20040518-110230
+no rainfall rates for runoff event d20050602-161330
+no rainfall rates for runoff event d20060720-043115
+no rainfall rates for runoff event d20070516-091015
+no rainfall rates for runoff event d20070715-122300
+no rainfall rates for runoff event d20070725-093745
+no rainfall rates for runoff event d20090601-130245
+no rainfall rates for runoff event d20100506-150715
+no rainfall rates for runoff event d20100510-100000
+no rainfall rates for runoff event d20100511-102745
+no rainfall rates for runoff event d20100624-150600
+no rainfall rates for runoff event d20110503-142745
+no rainfall rates for runoff event d20110627-120545
+no rainfall rates for runoff event d20120521-132945
+no rainfall rates for runoff event d20130507-095745
+no rainfall rates for runoff event d20140409-123545
+no rainfall rates for runoff event d20150421-155445
+no rainfall rates for runoff event d20160503-095345
+no rainfall rates for runoff event d20170420-085145
+no rainfall rates for runoff event d20180503-090045
+no rainfall rates for runoff event d20181217-204345
+no rainfall rates for runoff event d20190425-140145
+no rainfall rates for runoff event d20190925-063845
+no rainfall rates for runoff event d20200326-123545
+
+
+at flume102:
+18156 runoff records are available from DAP. Availability: 1963-07-29 20:02:00 to 2020-07-24 08:40:15
+
+no runoff rates for runoff event a19640720-225800
+no runoff rates for runoff event a19660831-155000
+no runoff rates for runoff event a19710803-161500
+no runoff rates for runoff event a19720808-170000
+no runoff rates for runoff event a19730612-172000
+no runoff rates for runoff event a19761024-035000
+
+
+Soil moisture available between 1996-07-09 07:20:00 and 2018-01-01 00:00:00
+
+
+ Events with sameRainFlag aggregated:
+['a19651209-153300', 'a19651209-214800']
+['a19741012-120100', 'a19741012-190100']
+['a19831001-173500', 'a19831002-063700', 'a19831003-000100']
+['a19850802-064400', 'a19850802-163600']
+['a19940903-033300', 'a19940903-122200']
+['a19970921-034700', 'a19970921-132500']
+['a19990714-140200', 'a19990715-055800']
+['a20001010-150000', 'a20001010-235500', 'a20001011-163700', 'a20001012-030200']
+['d19990714-121600', 'd19990715-051500']
+['d20000803-145415', 'd20000803-235400']
+['d20001010-144745', 'd20001010-232215', 'd20001011-084845', 'd20001011-161945', 'd20001012-023245']
+['d20001027-172145', 'd20001028-023930']
+['d20001104-160600', 'd20001105-001545']
+['d20060728-235630', 'd20060729-080000']
+['d20060809-181245', 'd20060810-113630']
+['d20070718-173045', 'd20070719-022015']
+['d20070720-191000', 'd20070721-071430']
+['d20070723-132030', 'd20070723-204800', 'd20070724-052045']
+['d20070804-111545', 'd20070804-181730']
+['d20090812-234030', 'd20090813-080930']
+['d20140917-121445', 'd20140917-193345']
+['d20180712-155545', 'd20180712-223145']
+['d20181207-062445', 'd20181207-133245']
+
+
+ 30 Events with sameRainFlag removed:
+a19651209-214800
+a19741012-190100
+a19831002-063700
+a19831003-000100
+a19850802-163600
+a19940903-122200
+a19970921-132500
+a19990715-055800
+a20001010-235500
+a20001011-163700
+a20001012-030200
+d19990715-051500
+d20000803-235400
+d20001010-232215
+d20001011-084845
+d20001011-161945
+d20001012-023245
+d20001028-023930
+d20001105-001545
+d20060729-080000
+d20060810-113630
+d20070719-022015
+d20070721-071430
+d20070723-204800
+d20070724-052045
+d20070804-181730
+d20090813-080930
+d20140917-193345
+d20180712-223145
+d20181207-133245
+
+
+========= Event Summary =========
+
+
+Number of runoff segments at this flume: 851
+Number of events after aggregation: 735
+Number of events with rainfall: 697
+Number of events with missing DAP runoff: 527
+Number of Runoff Events with missing rainfall: 38
+
+18156/18156 runoff records were matched with rainfall
+
+
+
+
+===== THE END =====
+Time to complete: 0:06:30.857866

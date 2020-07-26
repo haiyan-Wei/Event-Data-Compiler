@@ -1,0 +1,17 @@
+! 1 gauge(s)
+
+! Event Start at: 2007-08-14 20:07:00 at GAUGE #83
+
+BEGIN GAUGE  83
+X =     589697
+Y =     3512426
+SAT =   0.2886
+N =     4
+
+TIME     DEPTH ! (mm)
+0.00     0.0000
+2.00     0.7620
+3.00     1.5240
+4.00     1.7780
+END
+

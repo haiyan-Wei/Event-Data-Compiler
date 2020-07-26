@@ -1,0 +1,17 @@
+! 1 gauge(s)
+
+! Event Start at: 2009-07-10 16:35:00 at GAUGE #83
+
+BEGIN GAUGE  83
+X =     589697
+Y =     3512426
+SAT =   0.4198
+N =     4
+
+TIME     DEPTH ! (mm)
+0.00     0.0000
+3.00     0.3810
+5.00     0.6350
+7.00     1.0160
+END
+

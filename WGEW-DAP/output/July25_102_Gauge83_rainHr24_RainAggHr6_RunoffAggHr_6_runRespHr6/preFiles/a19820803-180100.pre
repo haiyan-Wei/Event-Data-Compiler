@@ -1,0 +1,21 @@
+! 1 gauge(s)
+
+! Estimated Initial Soil Moisture at gauge 83
+! Event Start at: 1982-08-03 18:00:00 at GAUGE #83
+
+BEGIN GAUGE  83
+X =     589697
+Y =     3512426
+SAT =   0.2767
+N =     7
+
+TIME     DEPTH ! (mm)
+0.00     0.0000
+2.00     0.7620
+4.00     2.5400
+6.00     3.8100
+10.00     5.0800
+15.00     5.3340
+27.00     5.5880
+END
+

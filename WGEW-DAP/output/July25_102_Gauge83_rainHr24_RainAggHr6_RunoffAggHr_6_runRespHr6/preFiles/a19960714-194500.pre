@@ -1,0 +1,15 @@
+! 1 gauge(s)
+
+! Event Start at: 1996-07-14 19:30:00 at GAUGE #83
+
+BEGIN GAUGE  83
+X =     589697
+Y =     3512426
+SAT =   0.5772
+N =     2
+
+TIME     DEPTH ! (mm)
+0.00     0.0000
+31.00     3.0480
+END
+
